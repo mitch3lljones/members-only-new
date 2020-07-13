@@ -1,0 +1,15 @@
+<%= provide(:title, "All Posts") %>
+<%= will_paginate %>
+<ul>
+    <% @posts.each do |post| %>
+        <li>
+            <% if logged_in? %>
+                <% @user = User.find(post.user_id) %>
+                <%= @user.name %>
+            <% end %>
+            <%= post.title %>
+            <%= post.body %>
+        </li>
+    <% end %>
+</ul>
+<%= will_paginate %>

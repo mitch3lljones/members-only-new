@@ -3,18 +3,16 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.1'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
-# Use Puma as the app server
+gem 'webpacker'
 gem 'puma', '~> 4.1'
-# Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker', '~> 4.0'
-# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.7'
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
-# Use Active Model has_secure_password
-gem 'bcrypt', '~> 3.1.7'
+gem 'sass-rails',    '~> 5.0'
+gem 'bulma-rails',   '~> 0.7.5'
+gem 'uglifier',      '>= 1.3.0'
+gem 'coffee-rails',  '~> 4.2'
+gem 'turbolinks',    '~> 5'
+gem 'jbuilder',      '~> 2.5'
+gem 'bcrypt',        '~> 3.1.7'
+gem 'will_paginate', '~> 3.1', '>= 3.1.8'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -28,7 +26,7 @@ group :development, :test do
 end
 
 group :development do
-  gem 'sqlite3',               '~> 1.4', '>= 1.4.1'
+  gem 'pg'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.2'
