@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MembersOnlyV2</title>
+   <title><%= full_title(yield(:title)) %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,12 @@
   </head>
 
   <body>
+    <%= render 'layouts/header' %>
+    <%= flash.each do |type, message| %>
+      <p><%= message %></p>
+    <% end %>
     <%= yield %>
+    <%= yield %>
+    <%= debug(params) if Rails.env.development? %>
   </body>
 </html>
