@@ -4,6 +4,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.0.3'
 
 gem 'rails', '~> 7.0.2'
+# Use sqlite3 as the database for Active Record
+gem 'sqlite3', '~> 1.4'
 gem 'webpacker', '~> 6.0.0.beta.2'
 gem 'puma', '~> 4.3'
 gem 'sass-rails',    '~> 5.0'
