@@ -7,7 +7,7 @@ gem 'rails', '~> 7.0.4.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
 gem 'webpacker', '~> 6.0.0.beta.2'
-gem 'puma', '~> 4.3'
+gem 'puma', '~> 5.6'
 gem 'sass-rails',    '~> 5.0'
 gem 'bulma-rails',   '~> 0.7.5'
 gem 'uglifier',      '>= 1.3.0'
